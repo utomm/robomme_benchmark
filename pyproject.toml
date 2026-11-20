@@ -8,8 +8,13 @@ dependencies = [
     "mani-skill",
     "opencv-python>=4.11.0.86",
     "setuptools==80.9.0",
-    "torch==2.9.1",
-    "torchvision==0.24.1",
+    "torch==2.6.0",
+    "torchvision==0.21.0",
+    "openpi-client",
+    "swift>=2.37.1",
+    "google-genai>=1.73.1",
+    "ms-swift>=4.1.2",
+    "google-generativeai>=0.8.6",
 ]
 
 [project.optional-dependencies]
@@ -17,6 +22,12 @@ dev = ["opencv-python", "pytest"]
 
 [tool.uv.sources]
 mani-skill = { git = "https://github.com/YinpeiDai/ManiSkill.git", rev = "07be6fbc66350ddca200abfb0a11b692f078f7fd" }
+openpi-client = { git = "https://github.com/Physical-Intelligence/openpi.git", subdirectory = "packages/openpi-client" }
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
 
 [build-system]
 requires = ["hatchling"]
